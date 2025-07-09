@@ -1,6 +1,6 @@
 # RPi-Zero-2-W-MJPEG-Streaming
 <p align="center">
-  <a href="https://drive.google.com/file/d/1SxrGfRK0qoJIxdzjj4nxNYeZHwk9vhIf/view?usp=drive_link">
+  <a href="https://drive.google.com/file/d/1SxrGfRK0qoJIxdzjj4nxNYeZHwk9vhIf/view?usp=drive_link" target="_blank">
     <img src="https://github.com/user-attachments/assets/bc06ccbf-f706-4a6c-9505-558e665a4825" width="600"/>
   </a>
 </p>
