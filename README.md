@@ -1,4 +1,10 @@
 # RPi-Zero-2-W-MJPEG-Streaming
+<p align="center">
+  <a href="https://drive.google.com/file/d/1GmY6HTTrxOw-vLo4Ho5MEbvcnFAVOZjr/view?usp=sharing](https://drive.google.com/file/d/1SxrGfRK0qoJIxdzjj4nxNYeZHwk9vhIf/view?usp=drive_link">
+    <img src="https://github.com/user-attachments/assets/bc06ccbf-f706-4a6c-9505-558e665a4825" width="600"/>
+  </a>
+</p>
+
 One of the primary module from our capstone project "IoT-Based Smart Traffic Monitoring System with Data Analytics"
 
 This project enables real-time video streaming from a Raspberry Pi Zero 2 W using a CSI camera module. 
@@ -6,12 +12,18 @@ It captures frames using the `picamera2` library, compresses them as JPEG images
 
 > This project provides a practical alternative for low-latency video streaming suitable for local AI processing and web interfaces.
 
+---
+
 🧩 Components
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c65a0670-3c8a-4574-bce9-4773cea8a364" width="600"/>
+</p>
 
 - Raspberry Pi Zero 2 W booted with 32-bit Lite OS
 - CSI Camera Rev 1.3 | 5 mp
 - Laptop
 
+---
 
 🚀 Features
 
@@ -36,6 +48,7 @@ sudo apt install -y \
   libcamera-apps
 ```
 
+---
 
 ## 🖥️ How to Run
 
