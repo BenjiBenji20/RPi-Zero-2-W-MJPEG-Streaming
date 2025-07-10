@@ -7,7 +7,7 @@ cap = cv2.VideoCapture("http://<raspberry-pi-ip>:8080/video")  # livestream from
 cap.set(3, 640)  # height
 cap.set(4, 360)  # width
 
-model = YOLO("image-weights/yolo11n.onnx")
+model = YOLO("image-weights/yolo11n.onnx") # prepare model weight
 
 classNames = [
     "person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
@@ -22,7 +22,7 @@ classNames = [
     "teddy bear", "hair drier", "toothbrush"
 ]
 
-# open the webcam
+# primary loop to run the camera bytes by bytes
 while True:
     success, img = cap.read()
     results = model(img, stream=True)
@@ -38,16 +38,13 @@ while True:
             # get the area of the box
             x1, y1, x2, y2 = box.xyxy[0]  # get the first element
             x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+            
             # create a rectangle for bounding box
-            # the cam read, width, height, color=green, line thickness
-            # cv2.rectangle(img, (x1, y1), (x2, y2), (0, 200, 0), 3)
             w, h = x2 - x1, y2 - y1
             cvzone.cornerRect(img, (x1, y1, w, h), l=9)  # rectangle with design
 
             # DISPLAY CONFIDENCE VALUE
             conf = math.ceil((box.conf[0] * 100)) / 100
-            # put text on the top of bounding box
-            # cvzone.putTextRect(img, f"{conf}", (max(0, x1), max(35, y1)))
 
             # CLASS NAME
             cls = int(box.cls[0])  # get the first class index of detected object
