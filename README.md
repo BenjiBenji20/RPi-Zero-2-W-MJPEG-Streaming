@@ -63,7 +63,7 @@ Note: Install the dependencies in requirement.txt, required for object detection
 
 3. In your Pi, run the streaming server:
 ```bash
-python3 stream.py
+python3 pi/stream.py
 ```
 
 4. Open the stream from another device:
